@@ -10,4 +10,24 @@ public class SecurityController {
     public String index() {
         return "boot3 home";
     }
+
+    @GetMapping("/user")
+    public String user() {
+        return "user";
+    }
+
+    @GetMapping("/admin/pay")
+    public String adminPay() {
+        return "adminPay";
+    }
+
+    @GetMapping("/admin/**")
+    public String admin() {
+        return "admin";
+    }
+
+    @GetMapping("/denied")
+    public String denied() {
+        return "Access is Denied";
+    }
 }
